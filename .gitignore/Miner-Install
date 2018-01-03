@@ -1,0 +1,19 @@
+apt-get upgrade
+apt-get update
+apt-get install
+apt-get install git
+apt-get install build-essential autotools-dev autoconf libcurl3 libcurl4-gnutls-dev -y
+apt-get install screen
+git clone https://github.com/OhGodAPet/cpuminer-multi.git
+cd cpuminer-multi/
+chmod +x autogen.sh
+./autogen.sh
+CFLAGS="-march=native" ./configure
+make
+sudo make install
+echo -e "\033[0;32m Seu Script foi instalado com sucesso!!\033[0m"
+sleep 3
+echo -e "\033[0;32m Seu E-mail do minergate:\033[0m"
+read -p "E-mail: " email
+screen - S ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u $email -p x
+echo -e " \033[0;32m Concluido!!\033[0m"
