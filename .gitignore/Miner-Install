@@ -5,7 +5,7 @@ apt-get install git
 apt-get install build-essential autotools-dev autoconf libcurl3 libcurl4-gnutls-dev -y
 apt-get install screen
 git clone https://github.com/OhGodAPet/cpuminer-multi.git
-cd cpuminer-multi/
+cd cpuminer-multi
 chmod +x autogen.sh
 ./autogen.sh
 CFLAGS="-march=native" ./configure
