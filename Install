@@ -13,8 +13,8 @@ make
 sudo make install
 echo -e "\033[0;32m Seu Script foi instalado com sucesso!!\033[0m"
 sleep 3
-echo -e "\033[0;32m Seu E-mail do minergate:\033[0m"
+echo -e "\033[0;32m Insira seu E-mail do minergate:\033[0m"
 read -p "E-mail: " email
 echo -e "\033[0;32m O Minerador será aberto em uma sessão "screen", aguarde 2 minutos e fecha essa janela. \033[0m"
-sleep 3
+sleep 10
 screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u $email -p x
