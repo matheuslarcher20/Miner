@@ -1,13 +1,8 @@
 #!/bin/bash
-if [ -f /etc/start-email ]
-then
+
 emailsaved=$(cat /etc/start-email)
-echo -e " O Minerador será aberto em uma sessão "screen" para o\033[0;32m $emailsaved\033[0m, aguarde 2 minutos e fecha essa janela."
-sleep 10
+cd cpuminer-multi
 screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u $emailsaved -p x
-else
-echo ""
-fi
 
 echo -e "\033[0;32m O Minerador será aberto em uma sessão "screen", aguarde 2 minutos e fecha essa janela. \033[0m"
 sleep 10
