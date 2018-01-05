@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ -f /etc/start-email ]
 then
 emailsaved=$(cat /etc/start-email)
