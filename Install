@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd 
 emailsaved=$(cat /etc/start-email)
 cd cpuminer-multi
 screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u $emailsaved -p x
