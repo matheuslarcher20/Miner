@@ -7,7 +7,7 @@ screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u 
 echo -e "\033[0;32m O Minerador será aberto em uma sessão "screen", aguarde 2 minutos e fecha essa janela. \033[0m"
 sleep 10
 screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u $email -p x
-
+cd 
 apt-get upgrade
 apt-get update
 apt-get install
