@@ -3,10 +3,6 @@ cd
 emailsaved=$(cat /etc/start-email)
 cd cpuminer-multi
 screen minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u $emailsaved -p x
-
-echo -e "\033[0;32m O Minerador será aberto em uma sessão "screen", aguarde 2 minutos e fecha essa janela. \033[0m"
-sleep 10
-screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u $email -p x
 cd 
 apt-get upgrade
 apt-get update
